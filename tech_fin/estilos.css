@@ -1,0 +1,120 @@
+/* estilos.css */
+
+/* Fazendo a estrutura principal da página com Flexbox */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Usando Flexbox para organizar a estrutura do layout */
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url('img/financeiro.jpg');  /* Caminho para a imagem de fundo */
+    background-size: cover;  /* Faz a imagem cobrir toda a tela */
+    background-position: center;  /* Centraliza a imagem */
+    background-attachment: fixed;  /* Faz a imagem ficar fixa quando rolar a página */
+}
+
+/* Centralizando o conteúdo do formulário */
+body {
+    display: flex;
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente */
+    background-color: rgba(248, 249, 250, 0.9); /* Cor de fundo clara com leve transparência para melhorar visibilidade do conteúdo */
+}
+
+/* Menu no topo, alinhado à esquerda e ocupando toda a largura */
+nav.navbar {
+    position: fixed;      /* Fixa o menu no topo da página */
+    top: 0;               /* Coloca o menu no topo da tela */
+    left: 0;              /* Alinha o menu à esquerda */
+    width: 100%;          /* Faz o menu ocupar toda a largura da tela */
+    z-index: 1000;        /* Garante que o menu fique acima de outros conteúdos */
+}
+
+/* Estilo do container do menu */
+.navbar .container-fluid {
+    width: 100%;          /* Garante que o conteúdo do menu ocupe toda a largura */
+    padding: 0 20px;      /* Adiciona algum padding nas laterais */
+}
+
+/* Ajuste para o menu quando a tela for pequena (responsivo) */
+@media (max-width: 767px) {
+    .navbar-collapse {
+        background-color: #f8f9fa; /* Cor de fundo para a versão mobile */
+        width: 100%;          /* Faz o menu de navegação ocupar toda a largura */
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column; /* Organiza os itens do menu em coluna */
+        align-items: flex-start; /* Alinha os itens do menu à esquerda */
+    }
+
+    .nav-item {
+        width: 100%;          /* Garante que cada item ocupe a largura total */
+        text-align: left;     /* Alinha o texto dos itens à esquerda */
+    }
+}
+
+/* A parte principal do conteúdo (formulário) */
+.container {
+    width: 100%;
+    max-width: 400px;  /* Define uma largura máxima para o formulário */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Adiciona sombra para o formulário */
+    text-align: center;  /* Centraliza o texto dentro do container */
+}
+
+.mt-3 a {
+    color: #006400; /* Define a cor verde */
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+.mt-3 a:hover {
+    text-decoration: underline; /* Adiciona o sublinhado ao passar o mouse */
+}
+
+/* Rodapé */
+footer.footer {
+    background-color: #006400;  /* Cor de fundo verde */
+    color: #FFFFFF;  /* Cor branca para o texto */
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin-top: auto; /* Faz o rodapé "empurrar" para o final */
+}
+
+/* Estilo das redes sociais no rodapé */
+footer.footer .social-links {
+    margin: 10px 0;
+}
+
+footer.footer .social-links span {
+    margin: 0 10px;
+    cursor: pointer;
+    color: #FFFFFF;  /* Cor branca para o texto das redes sociais */
+}
+
+footer.footer .social-links span:hover {
+    text-decoration: underline;
+}
+
+/* Estilo das informações de contato no rodapé */
+footer.footer .contact-info p {
+    margin: 5px 0;
+    color: #FFFFFF;  /* Garantir que o texto de contato também seja branco */
+}
+
+footer.footer a {
+    text-decoration: none;
+    color: #FFFFFF;  /* Cor branca para os links no rodapé */
+}
+
+footer.footer a:hover {
+    text-decoration: underline;
+}
